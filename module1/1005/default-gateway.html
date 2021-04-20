@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Addressing & Subnetting</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/lesson.css">
+    <style>
+        li {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container-fluid custom-1">
+        <div class="container-xxl">
+            <div class="row">
+                <div class="col-xl-4 col-lg-6 back">
+                    <a href="../../index.html" class="me-lg-2 text-decoration-none d-xl-block" >
+                        <i class="fas fa-chevron-left"></i>
+                        <span class="lead text-white text-center">Default Gateway</span>
+                    </a>
+                </div>
+            </div>
+        </div>  
+    </div>
+
+    <!-- <div class="container items">
+        <a href="/dns.html"><div class="item active">
+            <div class="inner ">
+            </div>
+        </div>
+        </a>
+    </div> -->
+
+    <div class="container">
+        <div class="content mt-5">
+            <h4>Default Gateway</h4>
+            <p>
+                If a TCP/IP computer needs to communicate with a host on another network, it will usually do so via a device known as a router. A default gateway is a TCP/IP router that is specified on a host and connects the host's subnet to other networks. 
+            </p>
+            
+            <div class="ipaddress">
+                <figure>
+                    <img src="../../assets/default-gateway.jpg" alt="" class="d-block m-auto">
+                    <figcaption class="fw-bold text-center" >
+                        Figure 1.2 Default Gateway IP Address
+                    </figcaption>
+                </figure>
+            </div>
+
+            <p>
+                This section describes how TCP/IP determines whether to send packets to its default gateway in order to reach another computer or device on the network.
+            </p>
+
+            <p>
+                When a host tries to communicate with another device via TCP/IP, it compares the defined subnet mask and the destination IP address to the subnet mask and its own IP address. The outcome of this comparison informs the computer whether the destination is a local or remote host.
+            </p>
+
+            <p>
+                If the outcome of this process indicates that the destination is a local host, the computer will send the packet on the local subnet. If the result of the comparison determines that the destination is a remote host, the packet is forwarded to the computer's default gateway as defined in its TCP/IP properties. It is then the router's responsibility to forward the packet to the correct subnet.
+            </p>
+            
+        </div>
+    </div>
+</div>
+    <footer>
+        <div class="footer-inner justify-content-end">
+            <a href="subnetting.html" class="btn 
+             btn-lg primary-btn">Continue</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+</body>
+</html>
