@@ -5,7 +5,7 @@ body {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  max-height: 100vh;
+  min-height: 100vh;
   background: #f9f9fa;
 }
 
@@ -26,6 +26,14 @@ body {
   padding-left: 0;
   padding-right: 0;
   margin-bottom: 20px;
+}
+
+p,
+h3,
+ul,
+li {
+  font-family: "Fira Sans";
+  font-size: 1rem !important;
 }
 
 .row a {
@@ -138,7 +146,7 @@ p {
   flex-direction: column;
   margin: 0 auto;
   width: 100%;
-  max-width: 600px;
+  max-width: 550px;
 }
 
 .info {
@@ -150,32 +158,51 @@ p {
   justify-content: space-between;
   display: flex;
   flex-direction: row-reverse;
-  width: 600px;
-  padding-top: 20px;
+  width: 500px;
 }
 
 footer {
   margin-top: auto;
-  padding-bottom: 30px;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding: 20px;
   border-top: 2px solid #dce2e5;
+  z-index: 1000;
 }
 
 .secondary-btn {
-  background-color: #fff;
-  color: #0474be;
+  border: 1px solid #2493df;
+  color: #2493df;
+  background: transparent;
+  padding: 10px 15px;
+}
+
+.primary-btn {
+  background: #2493df;
+  padding: 12px 15px;
+  border: none;
+}
+
+.primary-btn:hover {
+  background: #1477b9;
+}
+
+.secondary-btn:hover {
+  background: #e7e6e6;
+  color: #2493df;
 }
 
 .primary-btn,
 .secondary-btn {
   width: 150px;
   font-size: 1.2em;
+  font-weight: 500;
 }
 
 .content-container {
-  max-height: 70vh;
+  max-height: calc(100vh - 216px);
   overflow: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .content-container::-webkit-scrollbar {
@@ -191,12 +218,6 @@ footer {
 
 .content-container::-webkit-scrollbar-track {
   background: transparent;
-}
-
-@media (max-width: 576px) {
-  .btn-container {
-    width: 100%;
-  }
 }
 
 @media (max-width: 576px) {
@@ -219,6 +240,14 @@ footer {
 
   .row span {
     text-align: center;
+  }
+
+  .btn-container {
+    width: 100%;
+  }
+
+  .content-container {
+    min-height: calc(100vh - 216px);
   }
 }
 
